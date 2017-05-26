@@ -32,3 +32,8 @@ vim basic_test.rb
 * Change output format (JSON to formatting)
 * Update right hand side
 * The main goal is to show it is easy to make tests
+
+# Play Recorded asciinema Episode
+```
+asciinema play asciinema/install.json
+```
