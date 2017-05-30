@@ -1,28 +1,25 @@
-# Let's say you have fibonacci sequence generator
+# Let's say we have a fibonacci sequence generator
 ruby fibonacci.rb
-^L
-# Let's create test from it
+
+# Let's create a test for it
 vim fibonacci.rb
 
+<create class FibonacciTest>
+<replace puts with assert_value>
+
 # We start without expected value
-assert_value fibonacci(10)
+assert_value fibonacci(9)
 :w
 ruby fibonacci.rb
 y\n
 
-# Next time test will pass
-ruby fibonacci.rb
-
-# Why??!
+# We accepted new value.
+# assert_value automatically updated test.
 vim fibonacci.rb
 
-# Test "magically" updates itself
-
-fibonacci(a,b)
-assert_value fibonacci(5, 10)
+# Now we imrove readability of the test
 ruby fibonacci.rb
 y\n
-ruby fibonacci.rb
 vim fobonacci.rb
 
-# With assert_value it is very easy to write and maintain (!!!) tests
+# assert_value makes it easy to write and _maintain_ tests
