@@ -1,0 +1,28 @@
+# Let's say you have fibonacci sequence generator
+ruby fibonacci.rb
+^L
+# Let's create test from it
+vim fibonacci.rb
+
+# We start without expected value
+assert_value fibonacci(10)
+:w
+ruby fibonacci.rb
+y\n
+
+# Next time test will pass
+ruby fibonacci.rb
+
+# Why??!
+vim fibonacci.rb
+
+# Test "magically" updates itself
+
+fibonacci(a,b)
+assert_value fibonacci(5, 10)
+ruby fibonacci.rb
+y\n
+ruby fibonacci.rb
+vim fobonacci.rb
+
+# With assert_value it is very easy to write and maintain (!!!) tests
