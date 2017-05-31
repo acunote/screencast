@@ -2,26 +2,32 @@
 ruby fibonacci.rb
 
 # Let's create a test for it
+<pause>
+
 vim fibonacci.rb
 
 <create class FibonacciTest>
 <replace puts with assert_value>
 
-# We start without expected value
+# We don't need to specify expected value
+<pause>
 assert_value fibonacci(9)
 :w
 ruby fibonacci.rb
+<pause> #move pause before y
 y\n
 
-# We accepted new value
-# assert_value automatically updated test
+# We accepted the new value
+<pause>
 vim fibonacci.rb
+<Update comment>
+# assert_value automatically updated the test
 
-# Now we imrove readability of the test
+# Now we imrove readability of the output
 "x | fib(x)\n----------\n" +
 "#{x} | #{fib(x)}"
 ruby fibonacci.rb
 y\n
-vim fobonacci.rb
+vim fibonacci.rb
 
 # assert_value makes it easy to write and _maintain_ tests
