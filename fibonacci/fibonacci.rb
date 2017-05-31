@@ -6,4 +6,4 @@ def fib_seq(n)
   (0..n).map{|x| fib(x)}.join("\n")
 end
 
-puts fib_seq(10)
+puts fib_seq(9)

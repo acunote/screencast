@@ -13,11 +13,13 @@ assert_value fibonacci(9)
 ruby fibonacci.rb
 y\n
 
-# We accepted new value.
-# assert_value automatically updated test.
+# We accepted new value
+# assert_value automatically updated test
 vim fibonacci.rb
 
 # Now we imrove readability of the test
+"x | fib(x)\n----------\n" +
+"#{x} | #{fib(x)}"
 ruby fibonacci.rb
 y\n
 vim fobonacci.rb
