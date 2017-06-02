@@ -1,3 +1,9 @@
+# Screencast 10fps
+![Screencast](screencast_10fps.gif)
+
+# Screencast 5fps
+![Screencast](screencast_5fps.gif)
+
 # Script
 
 see fibonacci/script
