@@ -1,19 +1,27 @@
+# Let's create a test for Fibonacci number function
+defmodule Fibonacci do
+  def fib(0) do 0 end
+  def fib(1) do 1 end
+  def fib(n) do fib(n-1) + fib(n-2) end
+end
+
 defmodule FibonacciTest do
   use ExUnit.Case
   import Fibonacci
   import AssertValue
 
-  test "the truth" do
-    assert 1 + 1 == 2
-  end
-
-  test "fibonacci" do
-    result = "x | fib(x)\n----------\n" <> (
-      1..9
+  # Now we improve readability of the serialization
+  def serialize_fib_seq(n) do
+    "x | fib(x)\n----------\n" <> (
+      1..n
       |> Enum.map(fn(x) -> "#{x} | #{fib(x)}" end)
       |> Enum.join("\n")
     )
-    assert_value result == """
+  end
+
+  test "fibonacci" do
+    # assert_value makes it easy to write and _maintain_ tests
+    assert_value serialize_fib_seq(9) == """
     x | fib(x)
     ----------
     1 | 1

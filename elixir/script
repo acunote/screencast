@@ -1,0 +1,41 @@
+--- Scene 1 (console)
+vim test/fibonacci_test.exs
+
+--- Scene 2 (vim)
+# Let's create a test for Fibonacci module
+<pause>
+# At first we need a serialization function
+def serialize_fib_sec(n) do
+test "fibonacci" do
+# We don't need to specify expected value
+:w
+:q
+
+--- Scene 3 (console)
+mix test
+<pause>
+y\n
+# We accepted the new value
+<pause>
+vim test/fibonacci_test.exs
+
+--- Scene 4 (vim)
+<Scroll to new code>
+# assert_value automatically updated the test
+<pause>
+# Now we impriove readability of the serialization
+<add code>
+:w
+:q
+
+--- Scene 5 (console)
+mix test
+<pause>
+y\n
+vim test/fibonacci_test.exs
+
+--- Scene 6 (vim)
+<scroll to show new expected value>
+# assert_value makes it easy to write and _maintain_ tests
+<pause>
+
