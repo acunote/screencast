@@ -2,11 +2,12 @@
 vim test/fibonacci_test.exs
 
 --- Scene 2 (vim)
-# Let's create a test for Fibonacci module
+# Let's create a test for Fibonacci function
 <pause>
-# At first we need a serialization function
-def serialize_fib_sec(n) do
 test "fibonacci" do
+result =
+    1..n
+    |> Enum.map
 # We don't need to specify expected value
 :w
 :q
@@ -15,7 +16,7 @@ test "fibonacci" do
 mix test
 <pause>
 y\n
-# We accepted the new value
+# We accepted the new expected value
 <pause>
 vim test/fibonacci_test.exs
 
@@ -23,7 +24,7 @@ vim test/fibonacci_test.exs
 <Scroll to new code>
 # assert_value automatically updated the test
 <pause>
-# Now we impriove readability of the serialization
+# Now we improve readability of the test
 <add code>
 :w
 :q
