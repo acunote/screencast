@@ -1,4 +1,4 @@
-# Let's create a test for Fibonacci number function
+# Let's create a test for Fibonacci function
 defmodule Fibonacci do
   def fib(0) do 0 end
   def fib(1) do 1 end
@@ -10,16 +10,15 @@ defmodule FibonacciTest do
   import Fibonacci
   import AssertValue
 
-  # Now we improve readability of the serialization
-  def serialize_fib_seq(n) do
-    "x | fib(x)\n----------\n" <> (
-      1..n
-      |> Enum.map(fn(x) -> "#{x} | #{fib(x)}" end)
-      |> Enum.join("\n")
-    )
-  end
-
   test "fibonacci" do
+    # Now we improve readability of the test
+    result =
+      "x | fib(x)\n----------\n" <> (
+        1..9
+        |> Enum.map(fn(x) -> "#{x} | #{fib(x)}" end)
+        |> Enum.join("\n")
+    )
+
     # assert_value makes it easy to write and _maintain_ tests
     assert_value serialize_fib_seq(9) == """
     x | fib(x)
