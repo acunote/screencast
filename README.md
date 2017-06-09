@@ -1,8 +1,8 @@
-# Screencast 10fps
+# Ruby
 ![Screencast](screencast_10fps.gif)
 
-# Screencast 5fps
-![Screencast](screencast_5fps.gif)
+# Elixir
+![Screencast](elixir/screencast.gif)
 
 # Script
 
