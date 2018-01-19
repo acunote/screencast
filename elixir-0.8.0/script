@@ -1,0 +1,43 @@
+--- Scene 1 (console)
+vim test/example_test.exs
+
+--- Scene 2 (vim)
+<pause>
+test "foo" do
+    # You can start with no expected value
+    assert_value :foo
+end
+:w
+:q
+
+--- Scene 3 (console)
+mix test
+<pause>
+y\n
+# We accepted the new expected value
+<pause>
+vim test/example_test.exs
+
+--- Scene 4 (vim)
+<Scroll to new code>
+# assert_value automatically updated the test
+<pause>
+
+# Now let's create broken test
+test "bar" do
+    assert_value 2 + 2 == 5
+end
+:w
+:q
+
+--- Scene 5 (console)
+mix test
+<pause>
+y\n
+vim test/example_test.exs
+
+--- Scene 6 (vim)
+<scroll to show new expected value>
+# assert_value makes it easy to write and _maintain_ tests
+<pause>
+
