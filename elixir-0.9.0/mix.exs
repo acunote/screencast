@@ -29,7 +29,7 @@ defmodule Example.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:assert_value, git: "git@github.com:assert-value/assert_value_elixir.git", branch: "better-parse-expected", only: :test}
+      {:assert_value, git: "git@github.com:assert-value/assert_value_elixir.git", branch: "master", only: :test}
     ]
   end
 end
