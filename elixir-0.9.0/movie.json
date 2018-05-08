@@ -991,7 +991,7 @@
     ],
     [
       0.1,
-      "\r\ntest/example_test.exs:7:\"test example\" assert_value 2 + 2 failed\r\n\r\n-\r\n+4\r\n\r\nAccept new value? [y,n,?] "
+      "\r\ntest/example_test.exs:7:\"test example\" assert_value failed\r\n\r\n-    assert_value 2 + 2\r\n+    assert_value 2 + 2 == 4\r\n\r\nAccept new value? [y,n,?] "
     ],
     [
       2,
@@ -2171,7 +2171,7 @@
     ],
     [
       0.1,
-      "\r\ntest/example_test.exs:7:\"test example\" assert_value 2 + 2 - 1 == 4 failed\r\n\r\n-4\r\n+3\r\n\r\nAccept new value? [y,n,?] "
+      "\r\ntest/example_test.exs:7:\"test example\" assert_value failed\r\n\r\n-    assert_value 2 + 2 - 1 == 4\r\n+    assert_value 2 + 2 - 1 == 3\r\n\r\nAccept new value? [y,n,?] "
     ],
     [
       1.5,
