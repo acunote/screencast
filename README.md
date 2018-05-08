@@ -2,7 +2,7 @@
 ![Screencast](screencast_10fps.gif)
 
 # Elixir
-![Screencast](elixir-0.8.0/screencast.gif)
+![Screencast](elixir-0.9.0/screencast.gif)
 
 # Script
 
